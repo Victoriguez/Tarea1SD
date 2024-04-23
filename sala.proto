@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package sala;
+
+service SalaService {
+  rpc ObtenerSala (SolicitudSala) returns (RespuestaSala) {}
+}
+
+message SolicitudSala {
+  string curso = 1;
+}
+
+message RespuestaSala {
+  string sala = 1;
+}
